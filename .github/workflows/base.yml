@@ -1,6 +1,5 @@
 ## Testing
-name: Alchemy Docker Framework Image Commit Build and Deployment
-
+name: AlchemyDocker
 on: ["push"]
 jobs:
   testing:

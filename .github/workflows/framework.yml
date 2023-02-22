@@ -16,6 +16,9 @@ jobs:
         branchname: ["staging", "main"]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: check filepath change
         uses: marceloprado/has-changed-path@v1.0.1
         id: base-changed
@@ -23,7 +26,8 @@ jobs:
           paths: ".github/workflows/base.yml"
 
       - name: run some stuff
-        uses: actions/checkout@v3
+        run: |
+          echo "THIS RUNS"
         if: steps.base-changed.outputs.changed == 'false'
 
 

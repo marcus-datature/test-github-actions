@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 200
 
       - name: check filepath change
         uses: marceloprado/has-changed-path@v1.0.1
@@ -27,7 +29,7 @@ jobs:
 
       - name: run some stuff
         run: |
-          echo "THIS RUNS"
+        
         if: steps.base-changed.outputs.changed == 'false'
 
 

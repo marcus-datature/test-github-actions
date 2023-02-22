@@ -31,6 +31,9 @@ jobs:
         run: |
           echo "REACHED HERE"
         if: steps.base-changed.outputs.changed == 'false'
+      
+      - name: get github event name ${{ github.event_name }}
+        uses: actions/checkout@v3
 
 
     

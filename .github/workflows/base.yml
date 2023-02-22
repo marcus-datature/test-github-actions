@@ -9,9 +9,14 @@ jobs:
         branchname: ["staging"]
     runs-on: ubuntu-latest
     steps:
+      - name: Check github ref
+        id: github-ref
+        if: github.ref == format('refs/heads/{0}', matrix.branchname)
+        run: |
+          echo "abc=true" >> $GITHUB_OUTPUT
       - name: Checkout
         uses: actions/checkout@v3
-        if: github.ref == format('refs/heads/{0}', matrix.branchname)
+        if: steps.github-ref.outputs.abc == 'true'
         
 
 

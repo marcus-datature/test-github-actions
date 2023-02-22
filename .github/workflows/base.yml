@@ -1,5 +1,5 @@
 ## Testing
-name: "Test (Deploy Target: models) (Integration Target: models)"
+name: "Test Deploy Integration"
 
 on: ["push"]
 jobs:

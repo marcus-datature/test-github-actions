@@ -1,0 +1,11 @@
+## Testing
+name: alchemy
+
+on: ["push"]
+jobs:
+  testing:
+  runs-on: ubuntu-latest
+  steps:
+    - name: temp
+    run: echo "hello world"
+        

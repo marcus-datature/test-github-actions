@@ -29,7 +29,7 @@ jobs:
         uses: marceloprado/has-changed-path@v1.0.1
         id: base-changed
         with:
-          paths: ${{ format(".github/workflows/{0}", steps.setthis.outputs.naem) }}
+          paths: ${{ format('.github/workflows/{0}', steps.setthis.outputs.naem) }}
 
       - name: run some stuff
         run: |

@@ -25,14 +25,13 @@ jobs:
         uses: marceloprado/has-changed-path@v1.0.1
         id: base-changed
         with:
-          paths: ".github/workflows/base.yml"
+          paths: ".github/workflows/base.yml" 
 
       - name: run some stuff
         run: |
-        
+          echo "REACHED HERE"
         if: steps.base-changed.outputs.changed == 'false'
 
 
-    
     
     

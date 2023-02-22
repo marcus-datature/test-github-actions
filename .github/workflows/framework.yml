@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 200
+          fetch-depth: 0
 
       - name: check filepath change
         uses: marceloprado/has-changed-path@v1.0.1
@@ -30,11 +30,8 @@ jobs:
       - name: run some stuff
         run: |
           echo "REACHED HERE"
-        if: steps.base-changed.outputs.changed == 'false'
-      
-      - name: get github event name ${{ github.event_name }}
-        uses: actions/checkout@v3
-        
+        if: steps.base-changed.outputs.changed == 'true' && github.event_name == 'workflow_run'
+
 
 
     

@@ -1,5 +1,5 @@
 ## Testing
-name: "Alchemy-Docker Framework Image Commit, Build and Deployment (Deploy Target: models) (Integration Target: models)"
+name: "Test (Deploy Target: models) (Integration Target: models)"
 
 on: ["push"]
 jobs:

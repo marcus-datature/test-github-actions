@@ -1,5 +1,5 @@
 ## Testing
-name: base
+name: alchemy
 on: ["push"]
 jobs:
   testing:

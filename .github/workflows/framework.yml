@@ -1,0 +1,31 @@
+name: framework
+on:
+  push:
+    paths:
+      - ".github/workflows/base.yml"
+      - ".github/workflows/framework.yml"
+  workflow_run:
+    workflows: [base]
+    types:
+      - completed
+    
+jobs:
+  framework:
+    strategy:
+      matrix:
+        branchname: ["staging", "main"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: check filepath change
+        uses: marceloprado/has-changed-path@v1.0.1
+        id: base-changed
+        with:
+          paths: ".github/workflows/base.yml"
+
+      - name: run some stuff
+        uses: actions/checkout@v3
+        if: steps.base-changed.outputs.changed == 'false'
+
+
+    
+    

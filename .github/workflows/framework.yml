@@ -5,7 +5,7 @@ on:
       - ".github/workflows/base.yml"
       - ".github/workflows/framework.yml"
   workflow_run:
-    workflows: Alchemy-Docker Framework Image Commit, Build and Deployment
+    workflows: [base]
     types:
       - completed
     

@@ -1,5 +1,5 @@
 ## Testing
-name: AlchemyDocker
+name: base
 on: ["push"]
 jobs:
   testing:

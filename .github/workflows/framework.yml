@@ -1,11 +1,11 @@
-name: framework
+name: framework1234
 on:
   push:
     paths:
       - ".github/workflows/base.yml"
       - ".github/workflows/framework.yml"
   workflow_run:
-    workflows: [alchemy]
+    workflows: ["Docker Base Image Commit, Build and Deployment (Deploy Target: models) (Integration Target: models)"]
     types:
       - completed
     

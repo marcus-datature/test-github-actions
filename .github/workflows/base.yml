@@ -8,4 +8,9 @@ jobs:
     steps:
       - name: temp
         run: echo "hello world"
+    
+  trigger-secondary-workflow:
+    uses:
+      ./.github/workflows/secondary.yml
+
         

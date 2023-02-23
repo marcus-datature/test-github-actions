@@ -1,13 +1,15 @@
 name: secondary
-on:
-  push:
-    paths:
-      - ".github/workflows/base.yml"
-      - ".github/workflows/framework.yml"
-  workflow_run:
-    workflows: ["Alchemy-Docker Base Image Commit, Build and Deployment (Deploy Target: models) (Integration Target: models)"]
-    types:
-      - completed
+on: workflow_call
+  # push:
+  #   paths:
+  #     - ".github/workflows/base.yml"
+  #     - ".github/workflows/framework.yml"
+  # workflow_run:
+  #   workflows: ["Alchemy-Docker Base Image Commit, Build and Deployment (Deploy Target: models) (Integration Target: models)"]
+  #   types:
+  #     - completed
+
+
     
 jobs:
   framework:

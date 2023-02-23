@@ -10,6 +10,7 @@ jobs:
         run: echo "hello world"
     
   trigger-secondary-workflow:
+    needs: [testing]
     uses:
       ./.github/workflows/secondary.yml
 

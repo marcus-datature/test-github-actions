@@ -1,5 +1,5 @@
 ## Testing
-name: Dummy Workflow On The Default Branch
+name: "Docker Base Image Commit, Build and Deployment (Deploy Target: models) (Integration Target: models)"
 
 on: ["push"]
 jobs:

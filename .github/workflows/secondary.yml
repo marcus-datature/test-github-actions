@@ -26,6 +26,9 @@ jobs:
         id: setthis
         run: |
           echo "naem=base.yml" >> $GITHUB_OUTPUT
+      - name: Get github event name being ${{ github.event_name }}
+        run: |
+          echo "see above"
 
       - name: check filepath change
         uses: marceloprado/has-changed-path@v1.0.1
